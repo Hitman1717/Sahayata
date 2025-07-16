@@ -6,32 +6,7 @@ import Kavya from '../../photos/Kavya.png';
 
 export default function About() {
     // Sample data for the card components
-    const teamMembers = [
-        {
-            image: Sher,
-            name: 'B Shreyansh',
-            jobTitle: 'Backend Developer',
-            description: 'Passionate about web applications.',
-            linkedin: 'https://www.linkedin.com/in/bachchu-shreyansh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            github: 'https://github.com/Sheryansh0'
-        },
-        {
-            image: Mouli,
-            name: 'Gude Chandramouli',
-            jobTitle: 'Frontend Developer',
-            description: 'I am a proficient FrontEnd developer.',
-            linkedin: 'https://www.linkedin.com/in/chandramouli018?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            github: 'https://github.com/ChandramouliGude'
-        },
-        {
-            image: Kavya,
-            name: 'Ch Kavya',
-            jobTitle: 'UI/UX Designer',
-            description: 'Creating user-centered designs.',
-            linkedin: 'https://www.linkedin.com/in/chittoju-kavya-sri-541852287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-            github: 'https://github.com/Kavya592'
-        }
-    ];
+    
 
     return (
         <div className="py-16 bg-white">
@@ -43,21 +18,7 @@ export default function About() {
                 At Sahayata, our mission is to make a meaningful impact in the lives of those in need. We believe in the power of community and compassion, and we strive to create a world where everyone has the opportunity to thrive. Through our dedicated efforts, we aim to address pressing social issues and uplift marginalized individuals and communities. <br /> Our commitment extends beyond immediate assistance; we focus on sustainable solutions that empower individuals to improve their circumstances. By fostering collaboration among various stakeholders, we seek to create a network of support that not only meets immediate needs but also inspires long-term growth and self-sufficiency.
                 </p>
             </div>
-            <h1 className="text-4xl font-extrabold text-gray-800 mb-6 text-center">MEET OUR MEMBERS</h1>
-                {/* Card Section */}
-                <div className="mt-12 flex justify-center space-x-4"> {/* Flexbox for horizontal layout */}
-                    {teamMembers.map((member, index) => (
-                        <Card
-                            key={index}
-                            image={member.image}
-                            name={member.name}
-                            jobTitle={member.jobTitle}
-                            description={member.description}
-                            linkedin={member.linkedin}
-                            github={member.github}
-                        />
-                    ))}
-                </div>
+                
             </div>
         </div>
     );
