@@ -1,3 +1,0 @@
-frontend - https://sahayata-org.onrender.com
-backend - https://sahayata-backend-akk9.onrender.com
-mongodb+srv://shayataorg:thalaforareason@cluster0.qcbdj.mongodb.net/shayata

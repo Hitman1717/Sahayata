@@ -7,7 +7,7 @@ import Modal from '../Modal/Modal'; // Adjust the import path if necessary
 // --- Razorpay Test Key ID (IMPORTANT: Replace with your actual TEST Key ID) ---
 // In a real application, you might fetch this from an API endpoint for better security,
 // but for test keys and simplicity, hardcoding it here is common practice.
-const RAZORPAY_KEY_ID = 'rzp_live_POdxmtAXDDLEJW'; // <--- REPLACE THIS WITH YOUR ACTUAL RAZORPAY TEST KEY ID
+const RAZORPAY_KEY_ID = import.meta.env.VITE_RAZORPAY_KEY; // <--- REPLACE THIS WITH YOUR ACTUAL RAZORPAY TEST KEY ID
 
 const DonationForm = () => {
     const [formData, setFormData] = useState({
@@ -58,7 +58,7 @@ const DonationForm = () => {
 
                 try {
                     // Send verification details back to your backend
-                    const verificationResponse = await axios.post('http://localhost:5000/api/payment/verify', {
+                    const verificationResponse = await axios.post(`${import.meta.env.VITE_API_URL}/api/payment/verify`, {
                         orderId: response.razorpay_order_id,
                         paymentId: response.razorpay_payment_id,
                         signature: response.razorpay_signature,
@@ -156,7 +156,7 @@ const DonationForm = () => {
 
         try {
             // 1. Create Order on Backend
-            const orderResponse = await axios.post('http://localhost:5000/api/payment/create-order', {
+            const orderResponse = await axios.post(`${import.meta.env.VITE_API_URL}/api/payment/create-order`, {
                 amount: parseFloat(formData.amount), // Send amount in rupees to your backend
                 cause: formData.cause,
                 name: formData.name,

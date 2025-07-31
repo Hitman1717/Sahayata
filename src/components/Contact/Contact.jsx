@@ -21,7 +21,8 @@ export default function Contact() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/api/contactus', formData);
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/contactus`, formData);
+
             setModalTitle('Success');
             setModalMessage(response.data.message);
             setIsModalOpen(true); // Open modal on success

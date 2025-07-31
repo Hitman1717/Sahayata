@@ -14,9 +14,10 @@ const Dashboard = () => {
         const fetchDonations = async () => {
             try {
                 const [totalRes, byCauseRes, lastDonationsRes] = await Promise.all([
-                    axios.get('http://localhost:5000/api/donations/total'),
-                    axios.get('http://localhost:5000/api/donations/by-cause'),
-                    axios.get('http://localhost:5000/api/donations/last-5'), // New endpoint for last donations
+                    axios.get(`${import.meta.env.VITE_API_URL}/api/donations/total`),
+axios.get(`${import.meta.env.VITE_API_URL}/api/donations/by-cause`),
+axios.get(`${import.meta.env.VITE_API_URL}/api/donations/last-5`),
+
                 ]);
 
                 setTotalDonated(totalRes.data.totalDonated || 0);

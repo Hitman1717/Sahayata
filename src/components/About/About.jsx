@@ -1,8 +1,6 @@
 import React from 'react';
 import Card from '../Card/Card'; // Adjust the path if necessary
-import Mouli from '../../photos/Mouli.png'; 
-import Sher from '../../photos/Sher.png'; 
-import Kavya from '../../photos/Kavya.png'; 
+
 
 export default function About() {
     // Sample data for the card components
